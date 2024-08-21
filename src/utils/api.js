@@ -1,4 +1,4 @@
-const BASE_URL = '';
+const BASE_URL = 'https://contact-api.dicoding.dev/v1';
 
 function getAccessToken(){
     return localStorage.getItem('accessToken');
@@ -19,7 +19,7 @@ async function fetchWithToken(url,options={}){
 }
 
 async function login({email,password}){
-    const response = await fetch(`${BASE_URL}/login}`,{
+    const response = await fetch(`${BASE_URL}/login`,{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -39,7 +39,7 @@ async function login({email,password}){
 }
 
 async function register({name,email,password}){
-    const response = await fetch(`${BASE_URL}/register}`,{
+    const response = await fetch(`${BASE_URL}/register`,{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
